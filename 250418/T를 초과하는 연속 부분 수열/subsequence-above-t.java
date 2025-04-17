@@ -14,10 +14,10 @@ public class Main {
         for(int i = 1; i < n; i++){
             if((arr[i] > t && arr[i -1] > t) && (arr[i] > arr[i - 1])){
                 cnt++;
+                ans = Math.max(ans,cnt);
             }else{
                 cnt = 1;
             }
-            ans = Math.max(ans,cnt);
         }
         if(ans == 1){
             System.out.print(0); // 아무 연속 부분 수열 없음
