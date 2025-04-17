@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -12,20 +11,21 @@ public class Main {
         int ans = 0;
         int cnt = 1;
         boolean found = false;
+        
         for(int i = 1; i < n; i++){
-            if((arr[i] > t && arr[i -1] > t) && (arr[i] > arr[i - 1])){
+            if((arr[i] > t && arr[i-1] > t) && (arr[i] > arr[i-1])){
                 cnt++;
-                ans = Math.max(ans,cnt);
-                 found = true;
-            }else{
+                ans = Math.max(ans, cnt);
+                found = true;
+            } else {
                 cnt = 1;
             }
         }
-         if (found) {
+        
+        if (found) {
             System.out.print(ans);
         } else {
             System.out.print(0);
         }
-
     }
 }
