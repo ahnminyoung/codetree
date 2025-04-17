@@ -19,9 +19,8 @@ public class Main {
             }
             ans = Math.max(ans,cnt);
         }
-        
-        if(cnt == 1){
-            System.out.print(0);
+        if(ans == 1){
+            System.out.print(0); // 아무 연속 부분 수열 없음
         }else{
              System.out.print(ans);
         }
