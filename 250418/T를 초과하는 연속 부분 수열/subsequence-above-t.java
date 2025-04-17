@@ -9,20 +9,22 @@ public class Main {
         for (int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-        int ans = 1;
+        int ans = 0;
         int cnt = 1;
+        boolean found = false;
         for(int i = 1; i < n; i++){
             if((arr[i] > t && arr[i -1] > t) && (arr[i] > arr[i - 1])){
                 cnt++;
                 ans = Math.max(ans,cnt);
+                 found = true;
             }else{
                 cnt = 1;
             }
         }
-        if(ans == 1){
-            System.out.print(0); // 아무 연속 부분 수열 없음
-        }else{
-             System.out.print(ans);
+         if (found) {
+            System.out.print(ans);
+        } else {
+            System.out.print(0);
         }
 
     }
